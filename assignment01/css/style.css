@@ -1,0 +1,99 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+*::selection{
+    background-color: rgba(0,0,0,0);
+}
+
+html, body{
+    width: 100%;
+}
+
+body {
+    font-family: 'Bungee Hairline', sans-serif;
+    font-size: 20px;
+    background-color: grey;
+    color: white;
+    text-align: center;
+}
+
+.grand{
+    width: 450px;
+    height: 450px;
+    background-color: darkgrey;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.un{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    z-index: 9;
+}
+
+.deux{
+    background-color: black;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    z-index: 8;
+}
+
+.trois{
+    background-color: lightpink;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    z-index: 2;
+}
+
+.quatre{
+    background-color: lightgreen;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    bottom: 150px;
+    right: 0;
+}
+
+.cinq{
+    background-color: lightskyblue;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    right: 150px;
+}
+
+.six{
+    background-color: lightgoldenrodyellow;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    bottom: 0px;
+    left: 150px;
+}
+
+
+.one{
+    width: 700px;
+}

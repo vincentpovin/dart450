@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+
+#happy, #sad {
+  position: absolute;
+  margin: 0.5em;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20em;
+  opacity: 1;
+  transform: rotateZ(90deg);
+}
+
+#webcam {
+  position: absolute;
+  visibility: hidden;
+}
+
+
