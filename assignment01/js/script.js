@@ -7,11 +7,11 @@
 $(document).ready(function() {
 
 
-    $('.cinq, .six').click(function () {
+    $('#cinq, #six').click(function () {
         $(this).animate({ width: "300"}, 200 );
     });
     
-    $('.trois, .quatre').click(function () {
+    $('#trois, #quatre').click(function () {
         $(this).animate({ height: "300px"}, 200 );
     });
     
@@ -21,10 +21,18 @@ $(document).ready(function() {
         }    
     });
     
+    
+    
     $('.un').click(function () {
-        if ($('.trois').height() == 300) {
+        
+        if (    ($('#trois').height() == 300) &&
+                ($('#quatre').height() == 300) &&
+                ($('#cinq').height() == 300) &&
+                ($('#six').height() == 300) ){
+        
         $(this).animate({ height: "150px", width: "150px"}, 200 );
         }    
+   
     });
     
     
