@@ -11,18 +11,17 @@
 
 html, body{
     width: 100%;
-    height: 100%;
 }
 
-body{
+body {
     font-family: 'Bungee Hairline', sans-serif;
     font-size: 20px;
-    background-color: #696969;
+    background-color: grey;
     color: white;
     text-align: center;
 }
 
-#grand{
+.grand{
     width: 450px;
     height: 450px;
     background-color: darkgrey;
@@ -94,53 +93,7 @@ body{
 }
 
 
-
-.r{
-    width: 100px;
-    height: 100px;
-    background-color: black;
-    float: left;
-}
-
-.r2{
-    width: 100px;
-    height: 100px;
-    background-color: white;
-    position: absolute;
-    top:0;
-    left:0;
-}
-
-.r3{
-    width: 100px;
-    height: 100px;
-    background-color: white;
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-}
-
-.r4 {
-    width: 100px;
-    height: 100px;
-    background-color: white;
-    position: absolute;
-    bottom:0;
-    right:0;
-}
-
-
-#rond{
-    width: 0px;
-    height: 0px;
-    background-color: white;
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    border-radius: 50%;
+#un:hover, #deux:hover, #trois:hover, #quatre:hover, #cinq:hover, #six:hover{
+    
 }
 
