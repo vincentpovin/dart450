@@ -2,7 +2,14 @@
 var temps = 300;
 
 
+
+
+
+
 $(document).ready(function() {
+
+
+
 
 
     $('#cinq, #six').click(function () {
@@ -14,9 +21,12 @@ $(document).ready(function() {
                 $(this).animate({ width:"300px"}, temps );
             }
     });
-    
-    
-    
+ 
+
+
+
+
+
     $('#trois, #quatre').click(function () {
         
         if  (
@@ -26,9 +36,12 @@ $(document).ready(function() {
                 $(this).animate({ height:"300px"}, temps );
             }
     });    
-    
-    
-    
+
+
+
+
+
+
     $('#un').click(function () {
         
         if  (
@@ -46,8 +59,11 @@ $(document).ready(function() {
             }   
    
     });
-    
-    
+
+
+
+
+
     $('#deux').click(function () {
         
         if  (
@@ -64,9 +80,11 @@ $(document).ready(function() {
             }   
    
     });
-    
-        
-    
+
+
+
+
+ 
     $('#un').click(function () {
         
         if  (
@@ -91,8 +109,11 @@ $(document).ready(function() {
             
             }
     });
-    
-    
+
+
+
+
+ 
     $('#un').click(function () {
         
         if  (
@@ -107,11 +128,12 @@ $(document).ready(function() {
 
                 }
     });
-    
 
-    
-    
-    
+
+
+
+
+
     $('#un').click(function () {
         
         if  (
@@ -131,10 +153,11 @@ $(document).ready(function() {
                 });
             }
     });
-    
-    
-    
-    
+
+
+
+
+
     $('#rond').click(function () {
         
         if  (
@@ -171,39 +194,134 @@ $(document).ready(function() {
                 });
             }
     });
-    
-    
-    
-    
+
+
+
+
+
     $('#rond').click(function () {
         
         if  (
-                ($(this).height() == 450)  
+                ($(this).height() == 450)&&
+                ($('#rond6').height() == 75)  
             ){                 
                 $('#rond').animate({backgroundColor:"black"}, temps);
             }
     });
-    
-    
-    
-    
+
+
+
+
+
     $('#rond2').click(function () {
         
         if  (
-                ($(this).height() == 375)  
+                ($(this).height() == 375)&&
+                ($('#rond6').height() == 75)  
+
             ){                 
                 $('#rond2').animate({backgroundColor:"white"}, temps);
             }
     });
-    
-    
-    
+
+
+
+
+
     $('#rond3').click(function () {
         
         if  (
-                ($(this).height() == 375)  
+                ($(this).height() == 300) &&
+                ($('#rond6').height() == 75)  
             ){                 
-                $('#rond2').animate({backgroundColor:"black"}, temps);
+                $('#rond3').animate({backgroundColor:"white"}, temps);
+            }
+    });
+
+
+
+
+ 
+    $('#rond4').click(function () {
+        
+        if  (
+                ($(this).height() == 225)&&
+                ($('#rond6').height() == 75)   
+            ){                 
+                $('#rond4').animate({backgroundColor:"#999999"}, temps);
+            }
+    });
+
+
+
+
+ 
+    $('#rond5').click(function () {
+        
+        if  (
+                ($(this).height() == 150)&&
+                ($('#rond6').height() == 75)  
+
+            ){                 
+                $('#rond6').animate({ height:"25px", width:"25px" }, temps);
+            }
+    });
+
+
+
+
+
+    $('#rond6').click(function () {
+        
+        if  (
+                ($(this).height() == 25)  
+            ){                 
+                $('#rond6').animate({ height:"24px", width:"24px", left: '20%', top: '40%'}, temps);    
+                $('#rond4').animate({ left: '70%', top: '40%'}, temps);
+                $('#rond2, #rond3').animate({backgroundColor:"#ffe9ec"}, temps);
+            }
+    });
+
+
+
+
+ 
+    $('#rond6').click(function () {
+        
+        if  (
+                ($(this).height() == 24)  
+            ){                 
+                $('#rond6').animate({ height:"23px", width:"23px", left: '80%', top: '40%'}, temps);    
+                $('#rond4').animate({ left: '30%', top: '60%'}, temps);
+                $('#rond2, #rond3').animate({backgroundColor:"#ffcbd3"}, temps);
+            }
+    });
+
+
+
+
+    
+    $('#rond6').click(function () {
+        
+        if  (
+                ($(this).height() == 23)  
+            ){                 
+                $('#rond6').animate({ height:"74px", width:"74px", left: '50%', top: '50%'}, temps);    
+                $('#rond4').animate({ left: '50%', top: '50%'}, temps);
+                $('#rond2, #rond3').animate({backgroundColor:"#FFB6C1"}, temps);
+            }
+    });
+
+
+
+
+
+    $('#rond2, #rond3').click(function () {
+        
+        if  (
+                ($('#rond6').height() == 74)  
+            ){                 
+                $('#rond2, #rond3, #rond4, #rond5, #rond6').animate({backgroundColor:"black"}, temps);
             }
     });
     
