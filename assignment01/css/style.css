@@ -17,7 +17,7 @@ html, body{
 body{
     font-family: 'Bungee Hairline', sans-serif;
     font-size: 20px;
-    background-color: #696969;
+    background-color: #666666;
     color: white;
     text-align: center;
 }
@@ -25,7 +25,7 @@ body{
 #grand{
     width: 450px;
     height: 450px;
-    background-color: darkgrey;
+    background-color: #999999;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -58,7 +58,7 @@ body{
 }
 
 #trois{
-    background-color: lightpink;
+    background-color: #FFB6C1;
     width: 150px;
     height: 150px;
     position: absolute;
@@ -67,7 +67,7 @@ body{
 }
 
 #quatre{
-    background-color: lightgreen;
+    background-color: #90EE90;
     width: 150px;
     height: 150px;
     position: absolute;
@@ -76,7 +76,7 @@ body{
 }
 
 #cinq{
-    background-color: lightskyblue;
+    background-color: #87CEFA;
     width: 150px;
     height: 150px;
     position: absolute;
@@ -85,7 +85,7 @@ body{
 }
 
 #six{
-    background-color: lightgoldenrodyellow;
+    background-color: #FAFAD2;
     width: 150px;
     height: 150px;
     position: absolute;
@@ -133,6 +133,7 @@ body{
 
 
 #rond{
+    border-radius: 50%;
     width: 0px;
     height: 0px;
     background-color: white;
@@ -141,26 +142,18 @@ body{
     left:50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 800;
 }
 
-#rond2{
+#rond2, #rond3, #rond4, #rond5, #rond6{
+    border-radius: 50%;
     width: 0px;
     height: 0px;
-    background-color: black;
-    position: fixed;
+    background-color: white;
+    position: absolute;
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 900;
-}
-
-
-.radiation{
-    border-radius: 50%;
 }
 
 
