@@ -33,6 +33,29 @@ body{
     -webkit-transform: translate(-50%, -50%);
 }
 
+#parole{
+    width: 0px;
+    height: 0px;
+    background-color: ;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+#romeo, #juliette{
+    width: 0px;
+    height: 0px;
+    background-color: yellow;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    color: black;
+}
+
 #un{
     background-color: white;
     width: 50px;

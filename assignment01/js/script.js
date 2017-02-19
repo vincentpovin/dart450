@@ -1,7 +1,12 @@
 
 var temps = 300;
 
+// How long to wait between showing new lines
+const LINE_DELAY = 1500;
 
+// An index into the array of dialog, pointing to the current line
+// to put on the screen. Starts at 0, the first line!
+var currentLine = 0;
 
 
 
@@ -278,7 +283,6 @@ $(document).ready(function() {
             ){                 
                 $('#rond6').animate({ height:"24px", width:"24px", left: '20%', top: '40%'}, temps);    
                 $('#rond4').animate({ left: '70%', top: '40%'}, temps);
-                $('#rond2, #rond3').animate({backgroundColor:"#ffe9ec"}, temps);
             }
     });
 
@@ -293,7 +297,6 @@ $(document).ready(function() {
             ){                 
                 $('#rond6').animate({ height:"23px", width:"23px", left: '80%', top: '40%'}, temps);    
                 $('#rond4').animate({ left: '30%', top: '60%'}, temps);
-                $('#rond2, #rond3').animate({backgroundColor:"#ffcbd3"}, temps);
             }
     });
 
@@ -308,7 +311,7 @@ $(document).ready(function() {
             ){                 
                 $('#rond6').animate({ height:"74px", width:"74px", left: '50%', top: '50%'}, temps);    
                 $('#rond4').animate({ left: '50%', top: '50%'}, temps);
-                $('#rond2, #rond3').animate({backgroundColor:"#FFB6C1"}, temps);
+                $('#grand').animate({ height:"0px", width:"0px"}, temps);
             }
     });
 
@@ -321,23 +324,60 @@ $(document).ready(function() {
         if  (
                 ($('#rond6').height() == 74)  
             ){                 
-                $('#rond2, #rond3, #rond4, #rond5, #rond6').animate({backgroundColor:"black"}, temps);
+                $('#rond, #rond2, #rond3, #rond4, #rond5, #rond6').animate({height:"0px", width:"0px", backgroundColor:"white"}, temps);
+                $('#romeo, #juliette').animate({ height:"450px", width:"450px" });
+                $('#parole').animate({ height:"450px", width:"450px" }, temps, function() {
+                    $('#grand').animate({ height:"150px", width:"150px", backgroundColor:"white" }, temps);
+                });
             }
     });
-    
-    
-    
-    
-    
-    
-    
-   
-            
-    
 
     
+    
+    
 
+    $('#parole').click(function () {
+
+        showLine();
+
+    });
+    
 
     
 });
+
+
+
+
+function showLine () {
+
+  // Set both divs to be blank
+  $('#romeo,#juliet').text('');
+
+  // Get the name of the current speaker, which is the same
+  // as the CSS id for the div to put their text in
+  var speaker = dialog[currentLine].name
+
+  // Get the line they should speak
+  var line = dialog[currentLine].line
+
+  // Set the appropriate div to have the line in it
+  $('#' + speaker).text(line);
+
+  // Increase our index into the array by one to advance the dialog
+  currentLine++;
+
+  // Check if there are still lines remaining in the array of dialog
+  if (currentLine < dialog.length) {
+    // If so, set another timeout to say the next line
+    setTimeout(showLine,LINE_DELAY);
+  }
+    
+
+
+}
+
+
+
+
 
