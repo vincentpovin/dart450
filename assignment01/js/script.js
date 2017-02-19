@@ -126,7 +126,7 @@ $(document).ready(function() {
                         $('body').append('<div id="rond"></div>');
                         $('#deux').animate({ width:"0px", height: "0px"}, 400 );
                         $('#grand').animate({ width:"0px", height: "0px"}, 400, function() {
-                            $('#rond').animate({ width:"50px", height: "50px"}, 200);
+                            $('#rond').animate({ width:"50px", height: "50px"}, 100);
                         });
                     });
                 });
@@ -134,26 +134,16 @@ $(document).ready(function() {
     });
     
     
-    $('#rond').click(function () {
-        
-        if  (
-                ($(this).height() == 50) &&    
-                ($('#un').height() == 0) &&
-                ($('#deux').height() == 0)
-            ){                
-                $('#trois, #quatre').animate({ height:"0px"}, 200, function() {
-                    $('#cinq, #six').animate({ width:"0px"}, 200, function() {
-                        $('#un').animate({ width:"0px", height: "0px"}, 400);
-                        $('body').append('<div id="rond"></div>');
-                        $('#deux').animate({ width:"0px", height: "0px"}, 400 );
-                        $('#grand').animate({ width:"0px", height: "0px"}, 400, function() {
-                            $('#rond').animate({ width:"50px", height: "50px"}, 200);
-                        });
-                    });
-                });
+   $('body').on('click', '#rond', function() {
+       if  (
+                ($(this).width() == 50)
+            ){
+
+                $(this).animate({ width:"150px", height: "150px"}, 200 );
+                $('body').append('<div id="rond2"></div>');
             }
-    });
-    
+});
+            
     
 
     
