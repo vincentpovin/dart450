@@ -5,6 +5,8 @@
 
 // la durée des animations
 var temps = 300;
+
+// la durée des animations plus lente
 var tempsmort = 2000;
 
 
@@ -129,10 +131,11 @@ $(document).ready(function() {
    
     });
 
+    
 
 
 
- // Produit une LOOP jusqu'à ce que les carrées noirs remplissent l'espace disponible.
+// Produit une LOOP jusqu'à ce que les carrées noirs remplissent l'espace disponible.
     $('#un').click(function () {
         
         if  (
@@ -162,7 +165,7 @@ $(document).ready(function() {
 
 
 
-// Produit une LOOP jusqu'à ce que les carrées noirs remplissent l'espace disponible.
+// Supprime les carrés noirs.
     $('#un').click(function () {
         
         if  (
@@ -310,7 +313,7 @@ $(document).ready(function() {
 
 
 
-// Change la dimension du cercle 6 pour former la pupille.
+// Change la dimension du cercle 6 pour former une pupille.
     $('#rond5').click(function () {
         
         if  (
@@ -322,10 +325,11 @@ $(document).ready(function() {
             }
     });
 
+    
 
 
 
-// Change la dimension du cercle 6 pour former la pupille.
+// Déplace la pupille. L'oeil regarde.
     $('#rond6').click(function () {
         
         if  (
@@ -336,10 +340,11 @@ $(document).ready(function() {
             }
     });
 
+    
 
 
 
- 
+// Déplace à nouveau la pupille. L'oeil regarde encore.
     $('#rond6').click(function () {
         
         if  (
@@ -353,7 +358,7 @@ $(document).ready(function() {
 
 
 
-    
+// Recentre la pupille.   
     $('#rond6').click(function () {
         
         if  (
@@ -365,10 +370,11 @@ $(document).ready(function() {
             }
     });
 
+    
 
 
 
-
+// Crée le carré dans lequel le dialogue se déroulera.
     $('#rond2, #rond3').click(function () {
         
         if  (
@@ -386,6 +392,7 @@ $(document).ready(function() {
     
     
 
+// Déclenche le dialogue.
     $('#parole').click(function () {
         if  (
                 ($(this).height() == 50) &&    
@@ -395,6 +402,8 @@ $(document).ready(function() {
                 showLine();
             }
     });
+
+    
     
 
     
@@ -402,6 +411,14 @@ $(document).ready(function() {
 
 
 
+
+
+
+
+
+
+
+// Fonction définissant le déroulement du dialogue.
 
 function showLine () {
 
@@ -426,7 +443,8 @@ function showLine () {
     // If so, set another timeout to say the next line
     setTimeout(showLine,LINE_DELAY);
   }
-    
+
+// Précise la function lorsque le dialogue est terminé.
     else{
         $('#moi, #web').animate({ height:"0px", width:"0px"}, temps);
         $('#parole').animate({ height:"50px", width:"50px"}, temps);
@@ -441,8 +459,6 @@ function showLine () {
         });
     }
     
-
-
 }
 
 
