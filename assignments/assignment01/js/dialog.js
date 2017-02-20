@@ -2,11 +2,7 @@
 var dialog = [
     {
         name: "web",
-        line: ""
-    },
-    {
-        name: "web",
-        line: "Je te vois?"
+        line: "J'te vois?"
     },
     {
         name: "moi",
