@@ -1,10 +1,10 @@
 
 var temps = 300;
-var tempsmot = 1000;
+var tempsmort = 2000;
 
 
 // How long to wait between showing new lines
-const LINE_DELAY = 1000;
+const LINE_DELAY = 900;
 
 // An index into the array of dialog, pointing to the current line
 // to put on the screen. Starts at 0, the first line!
@@ -49,9 +49,12 @@ $(document).ready(function() {
 
 
 
+    
+    
     $('#un').click(function () {
         
         if  (
+                ($(this).height() == 50) &&
                 ($('#trois').height() == 300) &&
                 ($('#quatre').height() == 300) &&
                 ($('#cinq').width() == 300) &&
@@ -63,6 +66,27 @@ $(document).ready(function() {
                 $('#cinq').animate({ height:"25px", width:"425px", right:"0px"}, temps );
                 $('#six').animate({ height:"25px", width:"425px", left:"0px"}, temps );
                 $('#deux').animate({ height:"450px", width:"450px"}, temps );
+            }   
+   
+    });
+    
+    
+    
+    $('#sept').click(function () {
+        
+        if  (
+                ($(this).height() == 50) &&
+                ($('#trois').height() == 300) &&
+                ($('#quatre').height() == 300) &&
+                ($('#cinq').width() == 300) &&
+                ($('#six').width() == 300)
+            ){
+                $(this).animate({ backgroundColor:"black"}, temps );
+                $('#trois').animate({ backgroundColor:"black"}, temps );
+                $('#quatre').animate({ backgroundColor:"black"}, temps );
+                $('#cinq').animate({ backgroundColor:"black"}, temps );
+                $('#six').animate({ backgroundColor:"black"}, temps );
+                $('#deux').animate({ backgroundColor:"black"}, temps );
             }   
    
     });
@@ -327,9 +351,9 @@ $(document).ready(function() {
                 ($('#rond6').height() == 74)  
             ){                 
                 $('#rond, #rond2, #rond3, #rond4, #rond5, #rond6').animate({height:"0px", width:"0px", backgroundColor:"white"}, temps);
-                $('#web, #moi').animate({ height:"25px", width:"150px" });
+                $('#web, #moi').animate({ height: "auto", width:"150px" });
                 $('#grand').animate({ height:"150px", width:"150px" }, temps, function() {
-                    $('#parole').animate({ height:"150px", width:"150px" }, temps);
+                    $('#parole').animate({ height:"50px", width:"50px", backgroundColor: "black" }, temps);
                 });
             }
     });
@@ -340,9 +364,10 @@ $(document).ready(function() {
 
     $('#parole').click(function () {
         if  (
+                ($(this).height() == 50) &&    
                 ($('#grand').height() == 150)  
             ){
-                $('#parole').animate({ backgroundColor: "black" }, temps);
+                $('#parole').animate({ height:"150px", width:"150px", backgroundColor: "white" }, temps);
                 showLine();
             }
     });
@@ -380,10 +405,16 @@ function showLine () {
     
     else{
         $('#moi, #web').animate({ height:"0px", width:"0px"}, temps);
-        $('#parole').animate({ height:"0px", width:"0px"}, temps);
+        $('#parole').animate({ height:"50px", width:"50px"}, temps);
         $('#grand').animate({ height:"450px", width:"450px", backgroundColor: "#999999" }, tempsmort);
-        $('#un').animate({ height:"50px", width:"50px", backgroundColor: "white" }, tempsmort);
+        $('#sept').animate({ height:"50px", width:"50px", backgroundColor: "white" }, tempsmort);
         $('#deux').animate({ height:"150px", width:"150px", backgroundColor: "black" }, tempsmort);
+        $('#trois').animate({ height:"150px", width:"150px", backgroundColor: "#FFB6C1" }, tempsmort);
+        $('#quatre').animate({ height:"150px", width:"150px", backgroundColor: "#90EE90" }, tempsmort);
+        $('#cinq').animate({ height:"150px", width:"150px", backgroundColor: "#87CEFA" }, tempsmort);
+        $('#six').animate({ height:"150px", width:"150px", backgroundColor: "#FAFAD2" }, tempsmort, function() {
+            $('#parole').animate({ height:"0px", width:"0px" }, temps);
+        });
     }
     
 
