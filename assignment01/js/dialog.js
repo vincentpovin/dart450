@@ -2,6 +2,10 @@
 var dialog = [
     {
         name: "web",
+        line: ""
+    },
+    {
+        name: "web",
         line: "Je te vois?"
     },
     {
@@ -31,5 +35,9 @@ var dialog = [
     {
         name: "moi",
         line: "Jamais."
+    },
+    {
+        name: "web",
+        line: ""
     }
 ];

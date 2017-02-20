@@ -1,5 +1,7 @@
 
 var temps = 300;
+var tempsmot = 1000;
+
 
 // How long to wait between showing new lines
 const LINE_DELAY = 1000;
@@ -340,8 +342,8 @@ $(document).ready(function() {
         if  (
                 ($('#grand').height() == 150)  
             ){
-                $('#grand').animate({ height:"450px", width:"450px", backgroundColor: "white" }, temps);
-                showLine()
+                $('#parole').animate({ backgroundColor: "black" }, temps);
+                showLine();
             }
     });
     
@@ -375,6 +377,14 @@ function showLine () {
     // If so, set another timeout to say the next line
     setTimeout(showLine,LINE_DELAY);
   }
+    
+    else{
+        $('#moi, #web').animate({ height:"0px", width:"0px"}, temps);
+        $('#parole').animate({ height:"0px", width:"0px"}, temps);
+        $('#grand').animate({ height:"450px", width:"450px", backgroundColor: "#999999" }, tempsmort);
+        $('#un').animate({ height:"50px", width:"50px", backgroundColor: "white" }, tempsmort);
+        $('#deux').animate({ height:"150px", width:"150px", backgroundColor: "black" }, tempsmort);
+    }
     
 
 
