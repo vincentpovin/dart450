@@ -12,7 +12,7 @@ var tempsmort = 2000;
 
 
 // la durée entre chaque passage du dialogue
-const LINE_DELAY = 900;
+const LINE_DELAY = 1000;
 
 // Indique la ligne du dialogue qui sera affichée
 var currentLine = 0;
@@ -97,12 +97,12 @@ $(document).ready(function() {
                 ($('#cinq').width() == 300) &&
                 ($('#six').width() == 300)
             ){
-                $(this).animate({ backgroundColor:"black"}, temps );
-                $('#trois').animate({ backgroundColor:"black"}, temps );
-                $('#quatre').animate({ backgroundColor:"black"}, temps );
-                $('#cinq').animate({ backgroundColor:"black"}, temps );
-                $('#six').animate({ backgroundColor:"black"}, temps );
-                $('#deux').animate({ backgroundColor:"black"}, temps );
+                $(this).animate({ backgroundColor:"#666666"}, temps );
+                $('#trois').animate({ backgroundColor:"#666666"}, temps );
+                $('#quatre').animate({ backgroundColor:"#666666"}, temps );
+                $('#cinq').animate({ backgroundColor:"#666666"}, temps );
+                $('#six').animate({ backgroundColor:"#666666"}, temps );
+                $('#deux').animate({ backgroundColor:"#666666"}, temps );
             }   
    
     });
@@ -249,7 +249,8 @@ $(document).ready(function() {
 
 
 
- // Enchainement d'animation formant plusieurs cercle.
+    
+ // Change la couleur de certains cercles, pour former un oeil.
     $('#rond').click(function () {
         
         if  (
@@ -263,7 +264,8 @@ $(document).ready(function() {
 
 
 
-
+    
+ // Change la couleur de certains cercles pour former un oeil.
     $('#rond2').click(function () {
         
         if  (
@@ -278,7 +280,8 @@ $(document).ready(function() {
 
 
 
-
+    
+ // Change la couleur de certains cercles pour former un oeil.
     $('#rond3').click(function () {
         
         if  (
@@ -289,10 +292,11 @@ $(document).ready(function() {
             }
     });
 
+    
 
 
 
- 
+  // Change la couleur de certains cercles pour former un oeil.
     $('#rond4').click(function () {
         
         if  (
@@ -306,7 +310,7 @@ $(document).ready(function() {
 
 
 
- 
+// Change la dimension du cercle 6 pour former la pupille.
     $('#rond5').click(function () {
         
         if  (
@@ -321,7 +325,7 @@ $(document).ready(function() {
 
 
 
-
+// Change la dimension du cercle 6 pour former la pupille.
     $('#rond6').click(function () {
         
         if  (
