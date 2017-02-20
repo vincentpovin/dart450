@@ -1,6 +1,18 @@
 
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i');
 
+
+
+
+
+
+
+
+
+
+/* ===== BASE ===== */
+
+
 *{
     box-sizing: border-box;
     margin: 0px 0px 0px 0px;
@@ -26,6 +38,18 @@ body{
     letter-spacing: 0.3px;
 }
 
+
+
+
+
+
+
+
+
+
+/* ===== Rectangles ===== */
+
+
 #grand{
     width: 450px;
     height: 450px;
@@ -37,33 +61,7 @@ body{
     -webkit-transform: translate(-50%, -50%);
 }
 
-#parole{
-    width: 0px;
-    height: 0px;
-    background-color: black;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-}
 
-#web, #moi{
-    width: 0px;
-    background-color: ;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-}
-
-#moi{
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 300i;
-    font-style: italic;
-    font-size: 28px;
-}
 
 #un{
     background-color: white;
@@ -139,6 +137,16 @@ body{
 
 
 
+
+
+
+
+
+
+
+/* ===== Carrées - LOOP ===== */
+
+
 .r{
     width: 100px;
     height: 100px;
@@ -176,6 +184,17 @@ body{
 }
 
 
+
+
+
+
+
+
+
+
+/* ===== Cecrles ===== */
+
+
 #rond{
     border-radius: 50%;
     width: 0px;
@@ -199,5 +218,52 @@ body{
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
 }
+
+
+
+
+
+
+
+
+
+
+/* ===== Dialogue ===== */
+
+
+#parole{
+    width: 0px;
+    height: 0px;
+    background-color: black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+#web, #moi{
+    width: 0px;
+    background-color: ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+#moi{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300i;
+    font-style: italic;
+    font-size: 28px;
+}
+
+
+
+
+
+
+
 
 

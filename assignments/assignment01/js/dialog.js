@@ -1,3 +1,4 @@
+// Le dialogue
 
 var dialog = [
     {
