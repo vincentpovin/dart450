@@ -14,7 +14,7 @@ var tempsmort = 2000;
 
 
 // la durée entre chaque passage du dialogue
-const LINE_DELAY = 1000;
+const LINE_DELAY = 1100;
 
 // Indique la ligne du dialogue qui sera affichée
 var currentLine = 0;
