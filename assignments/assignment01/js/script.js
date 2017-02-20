@@ -1,24 +1,39 @@
 
+
+
+
+
+// la durée des animations
 var temps = 300;
 var tempsmort = 2000;
 
 
-// How long to wait between showing new lines
+
+
+
+// la durée entre chaque passage du dialogue
 const LINE_DELAY = 900;
 
-// An index into the array of dialog, pointing to the current line
-// to put on the screen. Starts at 0, the first line!
+// Indique la ligne du dialogue qui sera affichée
 var currentLine = 0;
 
 
 
 
+
+
+
+
+
+
+// Fonction débute lorsque le site est téléchargé
 $(document).ready(function() {
 
+    
 
 
 
-
+// Change les dimensions des rectangles 5 et 6
     $('#cinq, #six').click(function () {
        
         if  (
@@ -33,7 +48,7 @@ $(document).ready(function() {
 
 
 
-
+// Change les dimensions des rectangles 3 et 4
     $('#trois, #quatre').click(function () {
         
         if  (
@@ -44,13 +59,11 @@ $(document).ready(function() {
             }
     });    
 
-
-
-
-
-
     
     
+
+    
+// Change les dimensions de tous les rectangles
     $('#un').click(function () {
         
         if  (
@@ -72,6 +85,9 @@ $(document).ready(function() {
     
     
     
+    
+    
+// Change la couleur d'arrière-plan (noir) de tous les rectangles, à la fin du casse-tête
     $('#sept').click(function () {
         
         if  (
@@ -91,10 +107,11 @@ $(document).ready(function() {
    
     });
 
+    
 
 
 
-
+// Cache les rectangle 3,4,5 et 6. Agrandit le rectangle 1.
     $('#deux').click(function () {
         
         if  (
@@ -115,7 +132,7 @@ $(document).ready(function() {
 
 
 
- 
+ // Cache les rectangle 3,4,5 et 6. Agrandit le rectangle 1.
     $('#un').click(function () {
         
         if  (
