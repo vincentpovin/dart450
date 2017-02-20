@@ -132,7 +132,7 @@ $(document).ready(function() {
 
 
 
- // Cache les rectangle 3,4,5 et 6. Agrandit le rectangle 1.
+ // Produit une LOOP jusqu'à ce que les carrées noirs remplissent l'espace disponible.
     $('#un').click(function () {
         
         if  (
@@ -158,10 +158,11 @@ $(document).ready(function() {
             }
     });
 
+    
 
 
 
- 
+// Produit une LOOP jusqu'à ce que les carrées noirs remplissent l'espace disponible.
     $('#un').click(function () {
         
         if  (
@@ -182,6 +183,7 @@ $(document).ready(function() {
 
 
 
+// Cache l'ensemble des rectangles et crée un cercle.
     $('#un').click(function () {
         
         if  (
@@ -202,10 +204,11 @@ $(document).ready(function() {
             }
     });
 
+    
 
 
 
-
+ // Enchainement d'animation formant plusieurs cercle.
     $('#rond').click(function () {
         
         if  (
@@ -246,7 +249,7 @@ $(document).ready(function() {
 
 
 
-
+ // Enchainement d'animation formant plusieurs cercle.
     $('#rond').click(function () {
         
         if  (
