@@ -2,7 +2,7 @@
 var temps = 300;
 
 // How long to wait between showing new lines
-const LINE_DELAY = 1500;
+const LINE_DELAY = 1000;
 
 // An index into the array of dialog, pointing to the current line
 // to put on the screen. Starts at 0, the first line!
@@ -325,9 +325,9 @@ $(document).ready(function() {
                 ($('#rond6').height() == 74)  
             ){                 
                 $('#rond, #rond2, #rond3, #rond4, #rond5, #rond6').animate({height:"0px", width:"0px", backgroundColor:"white"}, temps);
-                $('#romeo, #juliette').animate({ height:"450px", width:"450px" });
-                $('#parole').animate({ height:"450px", width:"450px" }, temps, function() {
-                    $('#grand').animate({ height:"150px", width:"150px", backgroundColor:"white" }, temps);
+                $('#web, #moi').animate({ height:"25px", width:"150px" });
+                $('#grand').animate({ height:"150px", width:"150px" }, temps, function() {
+                    $('#parole').animate({ height:"150px", width:"150px" }, temps);
                 });
             }
     });
@@ -337,9 +337,12 @@ $(document).ready(function() {
     
 
     $('#parole').click(function () {
-
-        showLine();
-
+        if  (
+                ($('#grand').height() == 150)  
+            ){
+                $('#grand').animate({ height:"450px", width:"450px", backgroundColor: "white" }, temps);
+                showLine()
+            }
     });
     
 
@@ -352,7 +355,7 @@ $(document).ready(function() {
 function showLine () {
 
   // Set both divs to be blank
-  $('#romeo,#juliet').text('');
+  $('#web, #moi').text('');
 
   // Get the name of the current speaker, which is the same
   // as the CSS id for the div to put their text in

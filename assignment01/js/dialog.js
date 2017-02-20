@@ -1,31 +1,35 @@
 
 var dialog = [
-  {
-    name: "juliet",
-    line: "M'aimes-tu?"
-  },
-  {
-    name: "romeo",
-    line: "Peut-être."
-  },
-  {
-    name: "juliet",
-    line: "Un jour?"
-  },
-  {
-    name: "romeo",
-    line: "jamais."
-  },
-  {
-    name: "juliet",
-    line: "Demain?"
-  },
-  {
-    name: "romeo",
-    line: "Surement."
-  },
-  {
-    name: "juliet",
-    line: "Adieu."
-  }
+    {
+        name: "web",
+        line: "Je te vois?"
+    },
+    {
+        name: "moi",
+        line: "Non."
+    },
+    {
+        name: "web",
+        line: "Un peu?"
+    },
+    {
+        name: "moi",
+        line: "Pas vraiment."
+    },
+    {
+        name: "web",
+        line: "Demain?"
+    },
+    {
+        name: "moi",
+        line: "Non plus."
+    },
+    {
+        name: "web",
+        line: "Un jour?"
+    },
+    {
+        name: "moi",
+        line: "Jamais."
+    }
 ];
