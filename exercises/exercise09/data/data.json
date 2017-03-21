@@ -1,0 +1,19 @@
+{
+   "chiffre":[
+    "Deux",
+    "Trois",
+    "Quatre",
+    "Cinq",
+    "Six",
+    "Sept",
+    "Huit",
+    "Neuf",
+    "Dix"
+  ],
+  "temps": [
+    "demains",
+    "hiers",
+    "aujourd'huis",
+    "jamais"
+  ]
+}
