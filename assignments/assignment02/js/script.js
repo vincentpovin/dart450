@@ -1,10 +1,17 @@
 // la durée des animations
-var temps = 1000;
+var temps = 100;
 
 // la durée des animations plus lente
-var tempsLent = 2000;
+var tempsLent = 100;
+
+// la durée des animations utilisant scrollmagic
+var scrollTemps = 100;
 
 var grand = "60px";
+
+var grandScroll = "-=60";
+var grandScrollPositif = "+=60";
+
 
 var texteDrop = "+=55";
 
@@ -44,24 +51,30 @@ $(serieInterrogation).click(function () {
     if  (
             ($(serieInterrogationVide).height() == 0)
         ){
-            $( "#texte1" ).animate({ top: texteDrop, opacity: 0.25 }, temps);
-            $( "#texte2" ).animate({ top: texteDrop }, temps);
-            $('#a3,#a4').animate({ height:"0px"}, temps);     
-            $('#a1,#a2,#a5,#a6').animate({ height:grand }, temps, function() {
+            $('#a3,#a4').animate({ height:"0px"}, temps);
+            $('#a1,#a2,#a5').animate({ height:grand }, temps);     
+            $('#a6').animate({ height:grand }, temps, function() {
                 $('#b2,#b5').animate({ height:"0px" }, temps);
-                $('#b1,#b3,#b4,#b6').animate({ height:grand }, temps, function() {
+                $('#b1,#b3,#b4').animate({ height:grand }, temps);     
+                $('#b6').animate({ height:grand }, temps, function() {
                     $('#c5').animate({ height:"0px" }, temps);
-                    $('#c1,#c2,#c3,#c4,#c6').animate({ height:grand }, temps, function() {
+                    $('#c1,#c2,#c3,#c4').animate({ height:grand }, temps);         
+                    $('#c6').animate({ height:grand }, temps, function() {
                         $('#d4').animate({ height:"0px" }, temps);
-                        $('#d1,#d2,#d3,#d5,#d6').animate({ height:grand }, temps, function() {
-                            $(serieE).animate({ height:grand }, temps, function() {
+                        $('#d1,#d2,#d3,#d5').animate({ height:grand }, temps);         
+                        $('#d6').animate({ height:grand }, temps, function() {
+                            $('#e1,#e2,#e3,#e4,#e5').animate({ height:grand }, temps);         
+                            $('#e6').animate({ height:grand }, temps, function() {
                                 $('#f4').animate({ height:"0px" }, temps);
-                                $('#f1,#f2,#f3,#f5,#f6').animate({ height:grand }, temps, function() {
+                                $('#f1,#f2,#f3,#f5').animate({ height:grand }, temps);         
+                                $('#f6').animate({ height:grand }, temps, function() {
                                     $("#full").animate({ height:"100000px" }, temps, function() {
                                         $("body").removeClass("scrollhide");
-// Debug -> arrête les animation précédente    
-                                        $(serieInterrogation).clearQueue();
                                         $(serieInterrogation).animate({ height:grand }, temps);
+                                        $( "#texte1" ).animate({ top: texteDrop, opacity: 0.25 }, temps);
+                                        $( "#texte2" ).animate({ top: texteDrop }, temps, function() {
+                                            $("#image1").animate({ height:"360px" }, temps);
+                                        });
                                     });
                                 }); 
                             }); 
@@ -86,17 +99,144 @@ $(serieInterrogation).click(function () {
 // Scrollmagic animation 1
     
     var anim1 = new ScrollMagic.Scene({
-        triggerElement: ".anim1",
-        duration: 400
+        triggerElement: "#anim1",
+        duration: scrollTemps
     });
 
-    anim1.setTween(".anim1", 1, {
-        scale: 2.5
+    anim1.setTween("#c2,#c5", {
+        left: grandScroll
     });
     
     anim1.triggerHook(0.5);
 
     anim1.addTo(controller);
+    
+    
+
+// Scrollmagic animation 2
+    
+    var anim2 = new ScrollMagic.Scene({
+        triggerElement: "#anim2",
+        duration: scrollTemps
+    });
+
+    anim2.setTween("#c2,#c1", {
+        top: grandScroll
+    });
+
+    anim2.triggerHook(0.5);
+
+    anim2.addTo(controller);
+    
+    
+    
+    
+    var anim2b = new ScrollMagic.Scene({
+        triggerElement: "#anim2",
+        duration: scrollTemps
+    });
+
+    anim2b.setTween("#c4,#c5", {
+        left: grandScroll
+    });
+
+    
+    anim2b.triggerHook(0.5);
+
+    anim2b.addTo(controller);
+    
+    
+
+// Scrollmagic animation 3
+    
+    var anim3 = new ScrollMagic.Scene({
+        triggerElement: "#anim3",
+        duration: scrollTemps
+    });
+
+    anim3.setTween("#c1,#c2,#b1", {
+        top: grandScroll
+    });
+
+    anim3.triggerHook(0.5);
+
+    anim3.addTo(controller);
+    
+    
+    var anim3b = new ScrollMagic.Scene({
+        triggerElement: "#anim3",
+        duration: scrollTemps
+    });
+
+    anim3b.setTween("#c5,#c4,#c3", {
+        top: grandScroll
+    });
+
+    anim3b.triggerHook(0.5);
+
+    anim3b.addTo(controller);
+    
+    
+
+// Scrollmagic animation 4
+    
+    var anim4 = new ScrollMagic.Scene({
+        triggerElement: "#anim4",
+        duration: scrollTemps
+    });
+
+    anim4.setTween("#c1,#c2,#b1,#a1", {
+        left: grandScrollPositif
+    });
+
+    anim4.triggerHook(0.5);
+
+    anim4.addTo(controller);
+    
+    
+    var anim4b = new ScrollMagic.Scene({
+        triggerElement: "#anim4",
+        duration: scrollTemps
+    });
+
+    anim4b.setTween("#c5,#c4,#c3,#b3", {
+        left: grandScroll
+    });
+
+    anim4b.triggerHook(0.5);
+
+    anim4b.addTo(controller);
+    
+    
+// Scrollmagic animation 5
+    
+    var anim4 = new ScrollMagic.Scene({
+        triggerElement: "#anim4",
+        duration: scrollTemps
+    });
+
+    anim4.setTween("#c1,#c2,#b1,#a1", {
+        left: grandScrollPositif
+    });
+
+    anim4.triggerHook(0.5);
+
+    anim4.addTo(controller);
+    
+    
+    var anim4b = new ScrollMagic.Scene({
+        triggerElement: "#anim4",
+        duration: scrollTemps
+    });
+
+    anim4b.setTween("#c5,#c4,#c3,#b3", {
+        left: grandScroll
+    });
+
+    anim4b.triggerHook(0.5);
+
+    anim4b.addTo(controller);
+
     
     
     

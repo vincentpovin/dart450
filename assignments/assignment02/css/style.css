@@ -89,24 +89,19 @@ body::-webkit-scrollbar-thumb {
 }
 
 #full{
-    height: 0;
+    height: 10000px;
     width: 360px;
     position: relative;
     background-color: none;
     margin: 0 auto 0 auto;
 }
 
-.anim1{
+#anim1,#anim2,#anim3,#anim4{
     position: relative;
-    margin: 500px auto 0px auto;
-    height: 100px;
-    width: 100px;
-    background-color: none;
-}
-
-.blue{
-        background-color: none;
-
+    margin: 60px auto 0px auto;
+    height: 60px;
+    width: 60px;
+    background-color: blue;
 }
 
 #scrollcheat{
@@ -135,7 +130,15 @@ body::-webkit-scrollbar-thumb {
     left: 0px;  
 }
 
-
+#image1{
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image: url(../images/1.jpg);
+    background-size: 360px 360px;
+}
 
 
 /* ===== a, b, c, d, e, f -> style commun ===== */
@@ -172,26 +175,26 @@ body::-webkit-scrollbar-thumb {
 #a2{
     top: 0px;
     left: 60px;
-    background-color: #d4cec2;
+    background-color: #ede6dd;
 }
 
 #a3{
     top: 0px;
     left: 120px;
-    background-color: #e0d9cd;
+    background-color: #f8f4ed;
 }
 
 #a4{
 
     top: 0px;
     left: 180px;
-    background-color: #ebe1d8;
+    background-color: #fefbf8;
 }
 
 #a5{
     top: 0px;
     left: 240px;
-    background-color: #a99e91;
+    background-color: #ae9183;
 }
 
 #a6{
@@ -215,7 +218,7 @@ body::-webkit-scrollbar-thumb {
 #b2{
     top: 60px;
     left: 60px;
-    background-color: #ebe6dc;
+    background-color: #d6cdc9;
 }
 
 #b3{
@@ -227,7 +230,7 @@ body::-webkit-scrollbar-thumb {
 #b4{
     top: 60px;
     left: 180px;
-    background-color: #d5cdc7;
+    background-color: #dad3c9;
 }
 
 #b5{
@@ -256,13 +259,13 @@ body::-webkit-scrollbar-thumb {
 #c2{
     top: 120px;
     left: 60px;
-    background-color: #c7cfd5;
+    background-color: #7a8a9a;
 }
 
 #c3{
     top: 120px;
     left: 120px;
-    background-color: #b2a8a1;
+    background-color: #ecdcd5;
 }
 
 #c4{
@@ -274,7 +277,7 @@ body::-webkit-scrollbar-thumb {
 #c5{
     top: 120px;
     left: 240px;
-    background-color: #747874;
+    background-color: #79818c;
 }
 
 #c6{
@@ -297,25 +300,25 @@ body::-webkit-scrollbar-thumb {
 #d2{
     top: 180px;
     left: 60px;
-    background-color: #8f8b88;
+    background-color: #988783;
 }
 
 #d3{
     top: 180px;
     left: 120px;
-    background-color: #b7a19f;
+    background-color: #e3bcbb;
 }
 
 #d4{
     top: 180px;
     left: 180px;
-    background-color: #a69891;
+    background-color: #b29589;
 }
 
 #d5{
     top: 180px;
     left: 240px;
-    background-color: #9a908d;
+    background-color: #a48e83;
 }
 
 #d6{
@@ -344,7 +347,7 @@ body::-webkit-scrollbar-thumb {
 #e3{
     top: 240px;
     left: 120px;
-    background-color: #ac8b8a;
+    background-color: #e1adb3;
 }
 
 #e4{
@@ -385,7 +388,7 @@ body::-webkit-scrollbar-thumb {
 #f3{
     top: 300px;
     left: 120px;
-    background-color: #957878;
+    background-color: #bf8e91;
 }
 
 #f4{
