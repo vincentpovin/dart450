@@ -71,17 +71,33 @@ $(serieInterrogation).click(function () {
             });
         }
 });
+
+ 
     
     
 
-$(serieInterrogation).ready(function() {
-    if  (
-            ($(serieInterrogation).height() == 0)
-        ){
-            $('#a1').animate({ height:"0px"}, temps);     
-        }
-});
 
+// Scrollmagic    
+
+    var controller = new ScrollMagic.Controller();
+    
+    
+
+// Scrollmagic animation 1
+    
+    var anim1 = new ScrollMagic.Scene({
+        triggerElement: ".anim1",
+        duration: 400
+    });
+
+    anim1.setTween(".anim1", 1, {
+        scale: 2.5
+    });
+    
+    anim1.triggerHook(0.5);
+
+    anim1.addTo(controller);
+    
     
     
 });

@@ -96,6 +96,19 @@ body::-webkit-scrollbar-thumb {
     margin: 0 auto 0 auto;
 }
 
+.anim1{
+    position: relative;
+    margin: 500px auto 0px auto;
+    height: 100px;
+    width: 100px;
+    background-color: none;
+}
+
+.blue{
+        background-color: none;
+
+}
+
 #scrollcheat{
     height: 110%;
     width: 360px;
