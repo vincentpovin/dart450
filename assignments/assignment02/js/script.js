@@ -1,16 +1,10 @@
 // la durée des animations
-var temps = 100;
+var temps = 1000;
 
 // la durée des animations plus lente
-var tempsLent = 100;
-
-// la durée des animations utilisant scrollmagic
-var scrollTemps = 100;
+var tempsLent = 1000;
 
 var grand = "60px";
-
-var grandScroll = "-=60";
-var grandScrollPositif = "+=60";
 
 
 var texteDrop = "+=55";
@@ -51,28 +45,34 @@ $(serieInterrogation).click(function () {
     if  (
             ($(serieInterrogationVide).height() == 0)
         ){
-            $('#a3,#a4').animate({ height:"0px"}, temps);
+            $( "#texte1" ).animate({ top: texteDrop, opacity: 0.25 }, temps);    
+            $( "#texte2" ).animate({ top: texteDrop }, temps);    
+            $('#a3').animate({ height:"0px", backgroundColor:"#f8f4ed" }, temps);
+            $('#a4').animate({ height:"0px", backgroundColor:"#fefbf8" }, temps);
             $('#a1,#a2,#a5').animate({ height:grand }, temps);     
             $('#a6').animate({ height:grand }, temps, function() {
-                $('#b2,#b5').animate({ height:"0px" }, temps);
+                $('#b2').animate({ height:"0px", backgroundColor:"#d6cdc9" }, temps);
+                $('#b5').animate({ height:"0px", backgroundColor:"#777472" }, temps);
                 $('#b1,#b3,#b4').animate({ height:grand }, temps);     
                 $('#b6').animate({ height:grand }, temps, function() {
-                    $('#c5').animate({ height:"0px" }, temps);
+                    $('#c5').animate({ height:"0px", backgroundColor:"#79818c"}, temps);
                     $('#c1,#c2,#c3,#c4').animate({ height:grand }, temps);         
                     $('#c6').animate({ height:grand }, temps, function() {
-                        $('#d4').animate({ height:"0px" }, temps);
+                        $('#d4').animate({ height:"0px", backgroundColor:"#b29589" }, temps);
                         $('#d1,#d2,#d3,#d5').animate({ height:grand }, temps);         
                         $('#d6').animate({ height:grand }, temps, function() {
                             $('#e1,#e2,#e3,#e4,#e5').animate({ height:grand }, temps);         
                             $('#e6').animate({ height:grand }, temps, function() {
-                                $('#f4').animate({ height:"0px" }, temps);
+                                $('#f4').animate({ height:"0px", backgroundColor:"#51332d" }, temps);
                                 $('#f1,#f2,#f3,#f5').animate({ height:grand }, temps);         
                                 $('#f6').animate({ height:grand }, temps, function() {
-                                    $("#full").animate({ height:"100000px" }, temps, function() {
-                                        $("body").removeClass("scrollhide");
+                                    $("body").removeClass("scrollhide");
+                                    $("#full").removeClass("fix");
+                                    $("#full").addClass("relat", function() {
                                         $(serieInterrogation).animate({ height:grand }, temps);
                                         $( "#texte1" ).animate({ top: texteDrop, opacity: 0.25 }, temps);
-                                        $( "#texte2" ).animate({ top: texteDrop }, temps, function() {
+                                        $( "#texte2" ).animate({ top: texteDrop, opacity: 0.25 }, temps);
+                                        $( "#texte3" ).animate({ top: texteDrop }, temps, function() {
                                             $("#image1").animate({ height:"360px" }, temps);
                                         });
                                     });
@@ -84,158 +84,6 @@ $(serieInterrogation).click(function () {
             });
         }
 });
-
- 
-    
-    
-
-
-// Scrollmagic    
-
-    var controller = new ScrollMagic.Controller();
-    
-    
-
-// Scrollmagic animation 1
-    
-    var anim1 = new ScrollMagic.Scene({
-        triggerElement: "#anim1",
-        duration: scrollTemps
-    });
-
-    anim1.setTween("#c2,#c5", {
-        left: grandScroll
-    });
-    
-    anim1.triggerHook(0.5);
-
-    anim1.addTo(controller);
-    
-    
-
-// Scrollmagic animation 2
-    
-    var anim2 = new ScrollMagic.Scene({
-        triggerElement: "#anim2",
-        duration: scrollTemps
-    });
-
-    anim2.setTween("#c2,#c1", {
-        top: grandScroll
-    });
-
-    anim2.triggerHook(0.5);
-
-    anim2.addTo(controller);
-    
-    
-    
-    
-    var anim2b = new ScrollMagic.Scene({
-        triggerElement: "#anim2",
-        duration: scrollTemps
-    });
-
-    anim2b.setTween("#c4,#c5", {
-        left: grandScroll
-    });
-
-    
-    anim2b.triggerHook(0.5);
-
-    anim2b.addTo(controller);
-    
-    
-
-// Scrollmagic animation 3
-    
-    var anim3 = new ScrollMagic.Scene({
-        triggerElement: "#anim3",
-        duration: scrollTemps
-    });
-
-    anim3.setTween("#c1,#c2,#b1", {
-        top: grandScroll
-    });
-
-    anim3.triggerHook(0.5);
-
-    anim3.addTo(controller);
-    
-    
-    var anim3b = new ScrollMagic.Scene({
-        triggerElement: "#anim3",
-        duration: scrollTemps
-    });
-
-    anim3b.setTween("#c5,#c4,#c3", {
-        top: grandScroll
-    });
-
-    anim3b.triggerHook(0.5);
-
-    anim3b.addTo(controller);
-    
-    
-
-// Scrollmagic animation 4
-    
-    var anim4 = new ScrollMagic.Scene({
-        triggerElement: "#anim4",
-        duration: scrollTemps
-    });
-
-    anim4.setTween("#c1,#c2,#b1,#a1", {
-        left: grandScrollPositif
-    });
-
-    anim4.triggerHook(0.5);
-
-    anim4.addTo(controller);
-    
-    
-    var anim4b = new ScrollMagic.Scene({
-        triggerElement: "#anim4",
-        duration: scrollTemps
-    });
-
-    anim4b.setTween("#c5,#c4,#c3,#b3", {
-        left: grandScroll
-    });
-
-    anim4b.triggerHook(0.5);
-
-    anim4b.addTo(controller);
-    
-    
-// Scrollmagic animation 5
-    
-    var anim4 = new ScrollMagic.Scene({
-        triggerElement: "#anim4",
-        duration: scrollTemps
-    });
-
-    anim4.setTween("#c1,#c2,#b1,#a1", {
-        left: grandScrollPositif
-    });
-
-    anim4.triggerHook(0.5);
-
-    anim4.addTo(controller);
-    
-    
-    var anim4b = new ScrollMagic.Scene({
-        triggerElement: "#anim4",
-        duration: scrollTemps
-    });
-
-    anim4b.setTween("#c5,#c4,#c3,#b3", {
-        left: grandScroll
-    });
-
-    anim4b.triggerHook(0.5);
-
-    anim4b.addTo(controller);
 
     
     

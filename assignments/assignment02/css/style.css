@@ -18,7 +18,7 @@
 
 html, body{
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 body{
@@ -88,46 +88,38 @@ body::-webkit-scrollbar-thumb {
     -webkit-transform: translate(-50%, -50%);
 }
 
-#full{
-    height: 10000px;
-    width: 360px;
+.relat{
     position: relative;
-    background-color: none;
-    margin: 0 auto 0 auto;
 }
 
-#anim1,#anim2,#anim3,#anim4{
-    position: relative;
-    margin: 60px auto 0px auto;
+.fix{
+    position: fixed;
+}
+
+#full{
+    height: 13000px;
+    width: 60px;
+    background-color: none;
+    margin: 1000px auto 5000px auto;
+}
+
+
+#anim1,#anim2,#anim3,#anim4,#anim5,#anim6,#anim7,#anim8,#anim9{
+    margin: 1000px auto 1000px auto;
     height: 60px;
     width: 60px;
-    background-color: blue;
-}
-
-#scrollcheat{
-    height: 110%;
-    width: 360px;
-    position: relative;
     background-color: none;
-    margin: 0 auto 0 auto;
+    float: left;
 }
 
-#texte1,#texte2{
+#texte1,#texte2,#texte3{
     width: 100%;
     height: 48px;
-    background-color: black;
+    background-color: none;
     position: fixed;
     margin: 11px 11px 11px 11px;
-}
-
-#texte1{
     top: -60px;
-    left: 0px;  
-}
-
-#texte2{
-    top: -60px;
-    left: 0px;  
+    left: 0px; 
 }
 
 #image1{
@@ -169,7 +161,7 @@ body::-webkit-scrollbar-thumb {
 #a1{
     top: 0px;
     left: 0px;
-    background-color: #565852;
+    background-color: #252624;
 }
 
 #a2{
@@ -181,14 +173,12 @@ body::-webkit-scrollbar-thumb {
 #a3{
     top: 0px;
     left: 120px;
-    background-color: #f8f4ed;
 }
 
 #a4{
 
     top: 0px;
     left: 180px;
-    background-color: #fefbf8;
 }
 
 #a5{
@@ -212,13 +202,12 @@ body::-webkit-scrollbar-thumb {
 #b1{
     top: 60px;
     left: 0px;
-    background-color: #4b4d46;
+    background-color: #262b27;
 }
 
 #b2{
     top: 60px;
     left: 60px;
-    background-color: #d6cdc9;
 }
 
 #b3{
@@ -236,13 +225,12 @@ body::-webkit-scrollbar-thumb {
 #b5{
     top: 60px;
     left: 240px;
-    background-color: #777472;
 }
 
 #b6{
     top: 60px;
     left: 300px;
-    background-color: #5f5f58;
+    background-color: #443f35;
 }
 
 
@@ -277,13 +265,12 @@ body::-webkit-scrollbar-thumb {
 #c5{
     top: 120px;
     left: 240px;
-    background-color: #79818c;
 }
 
 #c6{
     top: 120px;
     left: 300px;
-    background-color: #2d2c28;
+    background-color: #332f2c;
 }
 
 
@@ -312,7 +299,6 @@ body::-webkit-scrollbar-thumb {
 #d4{
     top: 180px;
     left: 180px;
-    background-color: #b29589;
 }
 
 #d5{
@@ -341,7 +327,7 @@ body::-webkit-scrollbar-thumb {
 #e2{
     top: 240px;
     left: 60px;
-    background-color: #666562;
+    background-color: #705d54;
 }
 
 #e3{
@@ -353,13 +339,13 @@ body::-webkit-scrollbar-thumb {
 #e4{
     top: 240px;
     left: 180px;
-    background-color: #8b7d75;
+    background-color: #8e6b5c;
 }
 
 #e5{
     top: 240px;
     left: 240px;
-    background-color: #867a73;
+    background-color: #8a6c61;
 }
 
 #e6{
@@ -382,7 +368,7 @@ body::-webkit-scrollbar-thumb {
 #f2{
     top: 300px;
     left: 60px;
-    background-color: #544f4a;
+    background-color: #3a322a;
 }
 
 #f3{
@@ -394,13 +380,12 @@ body::-webkit-scrollbar-thumb {
 #f4{
     top: 300px;
     left: 180px;
-    background-color: #62544e;
 }
 
 #f5{
     top: 300px;
     left: 240px;
-    background-color: #62584f;
+    background-color: #4e372d;
 }
 
 #f6{
