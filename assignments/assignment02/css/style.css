@@ -82,6 +82,7 @@ body::-webkit-scrollbar-thumb {
     left: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
 
@@ -109,7 +110,7 @@ body::-webkit-scrollbar-thumb {
     background-color: none;
 }
 
-#texte1,#texte2,#texte3,#texte4,#texte5{
+.texte0,#texte1,#texte2,#texte3,#texte4,#texte5,#texte6,#texte7{
     width: 100%;
     height: 48px;
     background-color: none;
@@ -136,14 +137,14 @@ body::-webkit-scrollbar-thumb {
 #image2{
     top: 0px;
     left: 0px;
-    background-image: url(../images/3.jpg);
+    background-image: url(../images/2.jpg);
     background-position: bottom;
 }
 
 #image3{
     top: 0px;
     left: 0px;
-    background-image: url(../images/2.jpg);
+    background-image: url(../images/3.jpg);
     background-position: top;
 }
 
@@ -161,6 +162,13 @@ body::-webkit-scrollbar-thumb {
     width: 60px;
     height: 0px;
     position: absolute;
+    background-image: ;
+    background-size: 360px 360px;
+    background-repeat: no-repeat;
+}
+
+.voirimage3{
+    background-image: url(../images/3.jpg);
 }
 
 
@@ -177,35 +185,41 @@ body::-webkit-scrollbar-thumb {
     top: 0px;
     left: 0px;
     background-color: #252624;
+    background-position: 0px 0px;
+    background-position: 0px 0px;
 }
 
 #a2{
     top: 0px;
     left: 60px;
     background-color: #ede6dd;
+    background-position: -60px 0px;
 }
 
 #a3{
     top: 0px;
     left: 120px;
+    background-position: -120px 0px;
 }
 
 #a4{
-
     top: 0px;
     left: 180px;
+    background-position: -180px 0px;
 }
 
 #a5{
     top: 0px;
     left: 240px;
     background-color: #ae9183;
+    background-position: -240px 0px;
 }
 
 #a6{
     top: 0px;
     left: 300px;
     background-color: #2b2d25;
+    background-position: -300px 0px;
 }
 
 
@@ -218,34 +232,40 @@ body::-webkit-scrollbar-thumb {
     top: 60px;
     left: 0px;
     background-color: #262b27;
+    background-position: 0px -60px;
 }
 
 #b2{
     top: 60px;
     left: 60px;
+    background-position: -60px -60px;
 }
 
 #b3{
     top: 60px;
     left: 120px;
     background-color: #ffffff;
+    background-position: -120px -60px;
 }
 
 #b4{
     top: 60px;
     left: 180px;
     background-color: #dad3c9;
+    background-position: -180px -60px;
 }
 
 #b5{
     top: 60px;
     left: 240px;
+    background-position: -240px -60px;
 }
 
 #b6{
     top: 60px;
     left: 300px;
     background-color: #443f35;
+    background-position: -300px -60px;
 }
 
 
@@ -257,35 +277,41 @@ body::-webkit-scrollbar-thumb {
     top: 120px;
     left: 0px;
     background-color: #2a2c2b;
+    background-position: 0px -120px;
 }
 
 #c2{
     top: 120px;
     left: 60px;
     background-color: #7a8a9a;
+    background-position: -60px -120px;
 }
 
 #c3{
     top: 120px;
     left: 120px;
     background-color: #ecdcd5;
+    background-position: -120px -120px;
 }
 
 #c4{
     top: 120px;
     left: 180px;
     background-color: #ada9a6;
+    background-position: -180px -120px;
 }
 
 #c5{
     top: 120px;
     left: 240px;
+    background-position: -240px -120px;
 }
 
 #c6{
     top: 120px;
     left: 300px;
     background-color: #332f2c;
+    background-position: -300px -120px;
 }
 
 
@@ -297,35 +323,41 @@ body::-webkit-scrollbar-thumb {
     top: 180px;
     left: 0px;
     background-color: #353635;
+    background-position: -0px -180px;
 }
 
 #d2{
     top: 180px;
     left: 60px;
     background-color: #988783;
+    background-position: -60px -180px;
 }
 
 #d3{
     top: 180px;
     left: 120px;
     background-color: #e3bcbb;
+    background-position: -120px -180px;
 }
 
 #d4{
     top: 180px;
     left: 180px;
+    background-position: -180px -180px;
 }
 
 #d5{
     top: 180px;
     left: 240px;
     background-color: #a48e83;
+    background-position: -240px -180px;
 }
 
 #d6{
     top: 180px;
     left: 300px;
     background-color: #423b33;
+    background-position: -300px -180px;
 }
 
 
@@ -337,36 +369,42 @@ body::-webkit-scrollbar-thumb {
     top: 240px;
     left: 0px;
     background-color: #212629;
+    background-position: 0px -240px;
 }
 
 #e2{
     top: 240px;
     left: 60px;
     background-color: #705d54;
+    background-position: -60px -240px;
 }
 
 #e3{
     top: 240px;
     left: 120px;
     background-color: #e1adb3;
+    background-position: -120px -240px;
 }
 
 #e4{
     top: 240px;
     left: 180px;
     background-color: #8e6b5c;
+    background-position: -180px -240px;
 }
 
 #e5{
     top: 240px;
     left: 240px;
     background-color: #8a6c61;
+    background-position: -240px -240px;
 }
 
 #e6{
     top: 240px;
     left: 300px;
     background-color: #473d33;
+    background-position: -300px -240px;
 }
 
 
@@ -378,35 +416,41 @@ body::-webkit-scrollbar-thumb {
     top: 300px;
     left: 0px;
     background-color: #1b1615;
+    background-position: 0px -300px;
 }
 
 #f2{
     top: 300px;
     left: 60px;
     background-color: #3a322a;
+    background-position: -60px -300px;
 }
 
 #f3{
     top: 300px;
     left: 120px;
     background-color: #bf8e91;
+    background-position: -120px -300px;
 }
 
 #f4{
     top: 300px;
     left: 180px;
+    background-position: -180px -300px;
 }
 
 #f5{
     top: 300px;
     left: 240px;
     background-color: #4e372d;
+    background-position: -240px -300px;
 }
 
 #f6{
     top: 300px;
     left: 300px;
     background-color: #29251e;
+    background-position: -300px -300px;
 }
 
 

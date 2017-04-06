@@ -1,8 +1,8 @@
 // La durée des animations
-var temps = 1000;
+var temps = 500;
 
 // La durée des animations plus lente
-var tempsLent = 1000;
+var tempsLent = 500;
 
 // La dimension des carrés
 var grand = "60px";
@@ -117,55 +117,410 @@ $("#f6").click(function () {
             ($(serieZ).position().top == 300)&&
             ($(serieZ).position().left == 300)
         ){
-            $( "#texte5" ).animate({ top: texteDrop }, temps);
-            $( "#texte1,#texte2,#texte3,#texte4" ).animate({ top: texteDrop, opacity: coulFade }, temps);    
+            $("#texte5").animate({ top: texteDrop }, temps);
+            $("#texte1,#texte2,#texte3,#texte4").animate({ top: texteDrop, opacity: coulFade }, temps);    
             $("body").animate({ backgroundColor: coul, color: coulNoir},temps);
             $("#grand").animate({ backgroundColor: coul},temps);
             $("#image2").animate({ width:"0px" }, temps);
         
-            $("#a1").animate({ left: "-80px", top: "60px", backgroundColor:"#9e978f" }, temps);
-            $("#a2").animate({ left: "-200px", top: "200px", backgroundColor:"#1f1611" }, temps);
+            $("#a1").animate({ left: "-90px", top: "60px", backgroundColor:"#9e978f" }, temps);
+            $("#a2").animate({ left: "-240px", top: "240px", backgroundColor:"#1f1611" }, temps);
             $("#a3").animate({ left: "-60px", top: "60px", backgroundColor:"#edceaf" }, temps);
-            $("#a4").animate({ left: "-70px", top: "110px", backgroundColor:"#efe5e4" }, temps);
-            $("#a5").animate({ left: "-90px", top: "40px", backgroundColor:"#ece6e6" }, temps);
+            $("#a4").animate({ left: "-90px", top: "120px", backgroundColor:"#eccfcc" }, temps);
+            $("#a5").animate({ left: "-90px", top: "30px", backgroundColor:"#ece6e6" }, temps);
             $("#a6").animate({ left: "-150px", top: "290px", backgroundColor:"#ececca" }, temps);
         
-            $("#b1").animate({ left: "-90px", top: "100px", backgroundColor:"#2f221a" }, temps);
-            $("#b2").animate({ left: "-70px", top: "0px", backgroundColor:"#130e0b" }, temps);
-            $("#b3").animate({ left: "-120px", top: "20px", backgroundColor:"#e7ecd5" }, temps);
-            $("#b4").animate({ left: "-80px", top: "140px", backgroundColor:"#eae4e4" }, temps);
-            $("#b5").animate({ left: "-100px", top: "300px", backgroundColor:"#ebebe3" }, temps);
-            $("#b6").animate({ left: "-60px", top: "200px", backgroundColor:"#eccfa3" }, temps);
+            $("#b1").animate({ left: "-90px", top: "90px", backgroundColor:"#2f221a" }, temps);
+            $("#b2").animate({ left: "-90px", top: "0px", backgroundColor:"#130e0b" }, temps);
+            $("#b3").animate({ left: "-120px", top: "30px", backgroundColor:"#e7ecd5" }, temps);
+            $("#b4").animate({ left: "-90px", top: "120px", backgroundColor:"#eae4e4" }, temps);
+            $("#b5").animate({ left: "-120px", top: "300px", backgroundColor:"#ebebe3" }, temps);
+            $("#b6").animate({ left: "-60px", top: "180px", backgroundColor:"#eccfa3" }, temps);
         
-            $("#c1").animate({ left: "-60px", top: "200px", backgroundColor:"#a89ea6" }, temps);
+            $("#c1").animate({ left: "-60px", top: "210px", backgroundColor:"#9e8a9a" }, temps);
             $("#c2").animate({ left: "-60px", top: "60px", backgroundColor:"#563830" }, temps);
             $("#c3").animate({ left: "-150px", top: "160px", backgroundColor:"#ebd1b8" }, temps);
-            $("#c4").animate({ left: "-100px", top: "100px", backgroundColor:"#ecb4b3" }, temps);
-            $("#c5").animate({ left: "-70px", top: "0px", backgroundColor:"#ecc0b5" }, temps);
-            $("#c6").animate({ left: "-80px", top: "50px", backgroundColor:"#e99068" }, temps);
+            $("#c4").animate({ left: "-100px", top: "90px", backgroundColor:"#ecb4b3" }, temps);
+            $("#c5").animate({ left: "-60px", top: "0px", backgroundColor:"#ecc0b5" }, temps);
+            $("#c6").animate({ left: "-90px", top: "60px", backgroundColor:"#e99068" }, temps);
         
-            $("#d1").animate({ left: "-120px", top: "80px", backgroundColor:"#aa9aa7" }, temps);
+            $("#d1").animate({ left: "-120px", top: "90px", backgroundColor:"#aa9aa7" }, temps);
             $("#d2").animate({ left: "-210px", top: "30px", backgroundColor:"#ac8b92" }, temps);
-            $("#d3").animate({ left: "-60px", top: "160px", backgroundColor:"#e58a91" }, temps);
-            $("#d4").animate({ left: "-130px", top: "260px", backgroundColor:"#eb898a" }, temps);
-            $("#d5").animate({ left: "-160px", top: "120px", backgroundColor:"#d57867" }, temps);
-            $("#d6").animate({ left: "-90px", top: "40px", backgroundColor:"#904f39" }, temps);
+            $("#d3").animate({ left: "-60px", top: "180px", backgroundColor:"#e58a91" }, temps);
+            $("#d4").animate({ left: "-120px", top: "270px", backgroundColor:"#eb898a" }, temps);
+            $("#d5").animate({ left: "-180px", top: "120px", backgroundColor:"#d57867" }, temps);
+            $("#d6").animate({ left: "-90px", top: "30px", backgroundColor:"#904f39" }, temps);
         
-            $("#e1").animate({ left: "-180px", top: "150px", backgroundColor:"#6e3228" }, temps);
-            $("#e2").animate({ left: "-160px", top: "180px", backgroundColor:"#6b3326" }, temps);
-            $("#e3").animate({ left: "-80px", top: "80px", backgroundColor:"#994c38" }, temps);
-            $("#e4").animate({ left: "-60px", top: "240px", backgroundColor:"#603223" }, temps);
-            $("#e5").animate({ left: "-220px", top: "80px", backgroundColor:"#312620" }, temps);
-            $("#e6").animate({ left: "-130px", top: "130px", backgroundColor:"#5b5348" }, temps);
+            $("#e1").animate({ left: "-180px", top: "150px", backgroundColor:"#6d3027" }, temps);
+            $("#e2").animate({ left: "-150px", top: "180px", backgroundColor:"#7b4140" }, temps);
+            $("#e3").animate({ left: "-90px", top: "90px", backgroundColor:"#e66065" }, temps);
+            $("#e4").animate({ left: "-60px", top: "240px", backgroundColor:"#e68c7d" }, temps);
+            $("#e5").animate({ left: "-210px", top: "90px", backgroundColor:"#ae5b4c" }, temps);
+            $("#e6").animate({ left: "-120px", top: "120px", backgroundColor:"#362e28" }, temps);
 
-            $("#f1").animate({ left: "-90px", top: "150px", backgroundColor:"#511a17" }, temps);
-            $("#f2").animate({ left: "-60px", top: "70px", backgroundColor:"#6b3326" }, temps);
-            $("#f3").animate({ left: "-100px", top: "110px", backgroundColor:"#994c38" }, temps);
-            $("#f4").animate({ left: "-150px", top: "190px", backgroundColor:"#603223" }, temps);
-            $("#f5").animate({ left: "-120px", top: "140px", backgroundColor:"#312620" }, temps);
-            $("#f6").animate({ left: "-210px", top: "220px", backgroundColor:"#5b5348" }, temps);
+            $("#f1").animate({ left: "-90px", top: "150px", backgroundColor:"#521a18" }, temps);
+            $("#f2").animate({ left: "-60px", top: "90px", backgroundColor:"#693327" }, temps);
+            $("#f3").animate({ left: "-90px", top: "120px", backgroundColor:"#9a4c3a" }, temps);
+            $("#f4").animate({ left: "-150px", top: "190px", backgroundColor:"#603123" }, temps);
+            $("#f5").animate({ left: "-120px", top: "120px", backgroundColor:"#352823" }, temps);
+            $("#f6").animate({ left: "-210px", top: "210px", backgroundColor:"#585046" }, temps);
         }
 });
+    
+    
+$("#a1").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "0px", left: "0px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+
+$("#a2").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "0px", left: "60px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+    
+$("#a3").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "0px", left: "120px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+
+$("#a4").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "0px", left: "180px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+    
+$("#a5").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "0px", left: "240px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+    
+$("#a6").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "0px", left: "300px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});    
+    
+    
+    
+    
+$("#b1").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "60px", left: "0px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+    
+$("#b2").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "60px", left: "60px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+    
+$("#b3").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "60px", left: "120px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+
+$("#b4").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "60px", left: "180px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+    
+$("#b5").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "60px", left: "240px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+    
+$("#b6").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "60px", left: "300px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+
+
+    
+
+$("#c1").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "120px", left: "0px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+    
+$("#c2").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "120px", left: "60px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+    
+$("#c3").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "120px", left: "120px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+
+$("#c4").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "120px", left: "180px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+    
+$("#c5").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "120px", left: "240px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+    
+$("#c6").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "120px", left: "300px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+    
+    
+    
+
+$("#d1").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "180px", left: "0px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});    
+    
+$("#d2").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "180px", left: "60px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});    
+    
+$("#d3").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "180px", left: "120px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});    
+    
+$("#d4").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "180px", left: "180px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+    
+$("#d5").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "180px", left: "240px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+    
+$("#d6").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "180px", left: "300px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+
+    
+    
+    
+$("#e1").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "240px", left: "0px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+
+$("#e2").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "240px", left: "60px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+
+$("#e3").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "240px", left: "120px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+    
+$("#e4").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "240px", left: "180px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+    
+$("#e5").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "240px", left: "240px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+    
+$("#e6").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "240px", left: "300px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+
+
+
+    
+$("#f1").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "300px", left: "0px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+    
+$("#f2").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "300px", left: "60px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+    
+$("#f3").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "300px", left: "120px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});
+    
+$("#f4").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "300px", left: "180px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});      
+
+$("#f5").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "300px", left: "240px" }, temps);
+            $(this).css("background-image", "url(../images/3.jpg)");
+        }
+});    
+    
+$("#f6").hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $(this).animate({ top: "300px", left: "300px" }, temps);
+            $(this).addClass("voirimage3");
+        }
+});
+ 
+
+$(serieZ).hover(function () {   
+    if  (
+            ($(this).position().left < 0)
+        ){
+            $("body").each(function(){    
+                $(this).append("<div class='texte0'><p>M'en fou.</p></div>");   
+                $(".texte0").animate({ top: texteDrop }, temps); 
+                $( "#texte1,#texte2,#texte3,#texte4,#texte5" ).animate({ top: texteDrop, opacity: coulFade }, temps);
+            });
+        }
+});
+
+    
     
     
 });
