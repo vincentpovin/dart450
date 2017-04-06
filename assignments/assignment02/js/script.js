@@ -173,7 +173,7 @@ $("#a1").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "0px", left: "0px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
 
@@ -182,7 +182,7 @@ $("#a2").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "0px", left: "60px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
     
@@ -191,7 +191,7 @@ $("#a3").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "0px", left: "120px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
 
@@ -200,7 +200,7 @@ $("#a4").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "0px", left: "180px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
     
@@ -209,7 +209,7 @@ $("#a5").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "0px", left: "240px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
     
@@ -218,7 +218,7 @@ $("#a6").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "0px", left: "300px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });    
     
@@ -230,7 +230,7 @@ $("#b1").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "60px", left: "0px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
     
@@ -239,7 +239,7 @@ $("#b2").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "60px", left: "60px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
     
@@ -248,7 +248,7 @@ $("#b3").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "60px", left: "120px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
 
@@ -257,7 +257,7 @@ $("#b4").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "60px", left: "180px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
     
@@ -266,7 +266,7 @@ $("#b5").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "60px", left: "240px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
     
@@ -275,7 +275,7 @@ $("#b6").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "60px", left: "300px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
 
@@ -287,7 +287,7 @@ $("#c1").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "120px", left: "0px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
     
@@ -296,7 +296,7 @@ $("#c2").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "120px", left: "60px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
     
@@ -305,7 +305,7 @@ $("#c3").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "120px", left: "120px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
 
@@ -314,7 +314,7 @@ $("#c4").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "120px", left: "180px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
     
@@ -323,7 +323,7 @@ $("#c5").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "120px", left: "240px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
     
@@ -332,7 +332,7 @@ $("#c6").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "120px", left: "300px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
     
@@ -344,7 +344,7 @@ $("#d1").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "180px", left: "0px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });    
     
@@ -353,7 +353,7 @@ $("#d2").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "180px", left: "60px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });    
     
@@ -362,7 +362,7 @@ $("#d3").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "180px", left: "120px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });    
     
@@ -371,7 +371,7 @@ $("#d4").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "180px", left: "180px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
     
@@ -380,7 +380,7 @@ $("#d5").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "180px", left: "240px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
     
@@ -389,7 +389,7 @@ $("#d6").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "180px", left: "300px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
 
@@ -401,7 +401,7 @@ $("#e1").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "240px", left: "0px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
 
@@ -410,7 +410,7 @@ $("#e2").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "240px", left: "60px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
 
@@ -419,7 +419,7 @@ $("#e3").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "240px", left: "120px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
     
@@ -428,7 +428,7 @@ $("#e4").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "240px", left: "180px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
     
@@ -437,7 +437,7 @@ $("#e5").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "240px", left: "240px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
     
@@ -446,7 +446,7 @@ $("#e6").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "240px", left: "300px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
 
@@ -458,7 +458,7 @@ $("#f1").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "300px", left: "0px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
     
@@ -467,7 +467,7 @@ $("#f2").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "300px", left: "60px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
     
@@ -476,7 +476,7 @@ $("#f3").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "300px", left: "120px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });
     
@@ -485,7 +485,7 @@ $("#f4").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "300px", left: "180px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });      
 
@@ -494,7 +494,7 @@ $("#f5").hover(function () {
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "300px", left: "240px" }, temps);
-            $(this).css("background-image", "url(../images/3.jpg)");
+            $(this).addClass("voirimage3");
         }
 });    
     
