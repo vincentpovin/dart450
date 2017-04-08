@@ -50,6 +50,9 @@ var animZ = '#anim1,#anim2,#anim3,#anim4,#anim5,#anim6,#anim7,#anim8,#anim9,#ani
 // Fonction débute lorsque le site est téléchargé
 $(document).ready(function() {
 
+    
+    
+    
 // Enlève le son de la «plage»
 var audio2 = document.getElementById("audio2");
 audio2.volume = 0;  
@@ -610,12 +613,8 @@ $("#a1-2").click(function () {
         });
     });
 });
-    
+
+
     
     
 });
-
-
-
-
-
