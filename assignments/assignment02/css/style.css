@@ -10,7 +10,7 @@
 
 
 
-/* ===== Style de base ===== */
+/* ===== Styles de base ===== */
 
 *{
     box-sizing: border-box;
@@ -171,7 +171,7 @@ body::-webkit-scrollbar-thumb {
 
 
 
-/* ===== Style des boîtes d'image ===== */
+/* ===== Styles des boîtes d'image ===== */
 
 #image1,#image2,#image3,#image4{
     width: 100%;
@@ -252,7 +252,7 @@ body::-webkit-scrollbar-thumb {
 
 
 
-/* ===== Style des carrés de base ===== */
+/* ===== Styles des carrés de base ===== */
 
 
 
