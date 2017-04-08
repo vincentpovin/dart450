@@ -135,7 +135,7 @@ body::-webkit-scrollbar-thumb {
     height: auto;
     width: 360px;
     background-color: none;
-    margin: 1000px auto 1000px auto;
+    margin: 1000px auto 3000px auto;
 }
 
 #anim1,#anim2,#anim3,#anim4,#anim5,#anim6,#anim7,#anim8,#anim9,#anim10,#anim11,#anim12,#anim13,#anim14{
