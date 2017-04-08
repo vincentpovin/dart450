@@ -596,15 +596,15 @@ $("#a1-2").click(function () {
                 $("#texte8").animate({ top: texteDrop }, temps); 
                 $( ".texte0,#texte1,#texte2,#texte3,#texte4,#texte5,#texte6,#texte7" ).animate({ top: texteDrop, opacity: coulFade }, temps, function(){
 // Enlève la bar de défilement
-                    $("#full").remove();
+                   $("#full").remove();
 // FadeOut du texte
-                    $(".texte0,#texte1,#texte2,#texte3,#texte4,#texte5,#texte6,#texte7,#texte8").fadeOut(10000);
+                   $(".texte0,#texte1,#texte2,#texte3,#texte4,#texte5,#texte6,#texte7,#texte8").fadeOut(10000);
 // FadeIn de la photo de plage
-                    $("#imageplage").delay(10000).fadeIn(20000);
+                   $("#imageplage").delay(10000).fadeIn(20000);
 // FadeOut de la musique
-                    $("#audio1").delay(10000).animate({volume: 0}, 20000);
+                   $("#audio1").delay(10000).animate({volume: 0}, 20000);
 // FadeIn du son de plage
-                    $("#audio2").delay(10000).animate({volume: 0.5}, 20000);
+                   $("#audio2").delay(10000).animate({volume: 0.5}, 20000);
                 });
             });
         });
