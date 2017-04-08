@@ -1,8 +1,8 @@
 // La durée des animations
-var temps = 500;
+var temps = 1000;
 
 // La durée des animations plus lente
-var tempsLent = 500;
+var tempsLent = 1000;
 
 // La dimension des carrés
 var grand = "60px";
@@ -12,8 +12,8 @@ var texteDrop = "+=55";
 
 // Les couleurs principales
 var coul = "white";
-var coulNoir = "black";
-var coulFade = "0.2";
+var coulNoir = "#808080";
+var coulFade = "0.4";
 
 
 // Les rangés de carrés
@@ -30,7 +30,14 @@ var serieInterrogationVide = '#a1,#a2,#a5,#a6,#b1,#b3,#b4,#b6,#c1,#c2,#c3,#c4,#c
 
 // Tous les carrés
 var serieZ = '#a1,#a2,#a3,#a4,#a5,#a6,#b1,#b2,#b3,#b4,#b5,#b6,#c1,#c2,#c3,#c4,#c5,#c6,#d1,#d2,#d3,#d4,#d5,#d6,#e1,#e2,#e3,#e4,#e5,#e6,#f1,#f2,#f3,#f4,#f5,#f6';
-    
+
+// Tous les carrés sauf A1
+var serieZmoinsA1 = '#a2,#a3,#a4,#a5,#a6,#b1,#b2,#b3,#b4,#b5,#b6,#c1,#c2,#c3,#c4,#c5,#c6,#d1,#d2,#d3,#d4,#d5,#d6,#e1,#e2,#e3,#e4,#e5,#e6,#f1,#f2,#f3,#f4,#f5,#f6';
+
+// Tous les déclencheur d'animation (scrollmagic)
+var animZ = '#anim1,#anim2,#anim3,#anim4,#anim5,#anim6,#anim7,#anim8,#anim9,#anim10,#anim11,#anim12,#anim13,#anim14';
+
+
 
 
 
@@ -43,20 +50,28 @@ var serieZ = '#a1,#a2,#a3,#a4,#a5,#a6,#b1,#b2,#b3,#b4,#b5,#b6,#c1,#c2,#c3,#c4,#c
 // Fonction débute lorsque le site est téléchargé
 $(document).ready(function() {
 
-
-$(serieZ).addClass("abso");   
-    
+// Enlève le son de la «plage»
+var audio2 = document.getElementById("audio2");
+audio2.volume = 0;  
+ 
+// Texte descend à l'ouverture du site
 $( "#texte1" ).animate({ top: texteDrop }, tempsLent);
-    
+
+// Fait apparaitre le point d'interrogation à l'ouverture du site
 $( serieInterrogation ).animate({ height:grand }, tempsLent);
 
-   
+// Permet de faire apparaitre en fadeIn le gif animé et la photo de la fin
+$("#imagez").fadeOut();
+$("#imageplage").fadeOut();
+ 
 
 // Animation du point d'interrogation    
 $(serieInterrogation).click(function () {   
+// Condition : point d'interrogation doit être vide (noir)
     if  (
             ($(serieInterrogationVide).height() == 0)
         ){
+// Fait descendre le texte et les carrées de haut en bas, une rangé après l'autre
             $( "#texte1" ).animate({ top: texteDrop, opacity: coulFade }, temps);    
             $( "#texte2" ).animate({ top: texteDrop }, temps);    
             $('#a3').animate({ height:"0px", backgroundColor:"#f8f4ed" }, temps);
@@ -78,11 +93,15 @@ $(serieInterrogation).click(function () {
                                 $('#f4').animate({ height:"0px", backgroundColor:"#51332d" }, temps);
                                 $('#f1,#f2,#f3,#f5').animate({ height:grand }, temps);         
                                 $('#f6').animate({ height:grand }, temps, function() {
+// Enlève le positionnement «fixed» du DIV (#full) comprenant les activateurs d'animation SCROLLMAGIC
+// Le positionnement RELATIF permet de défiler la page vers le bas afin d'activer les fonctions SCROLLMAGIC
                                     $("#full").removeClass("fix");
                                     $("#full").addClass("relat", function() {
+// Remplit le point d'interrogation
                                         $(serieInterrogation).animate({ height:grand }, temps);
                                         $( "#texte1,#texte2" ).animate({ top: texteDrop, opacity: coulFade }, temps);
                                         $( "#texte3" ).animate({ top: texteDrop }, temps, function() {
+// Fait apparaitre l'image cachée derrière les carrés
                                             $("#image1").animate({ height:"360px" }, temps);
                                         });
                                     });
@@ -98,13 +117,17 @@ $(serieInterrogation).click(function () {
     
 // Le carré bleu se déplace vers le bas
 $("#f6").click(function () {   
+// Condition : tout les carré se retrouvent au même endroit
     if  (
             ($(serieZ).position().top == 180)&&
             ($(serieZ).position().left == 300)
         ){
+// Changement la couleur des carrés et les déplace en bas
             $(serieZ).animate({ backgroundColor:"white", top: 300 }, temps);
+// Animation du texte vers le bas
             $( "#texte4" ).animate({ top: texteDrop }, temps);
             $( "#texte1,#texte2,#texte3" ).animate({ top: texteDrop, opacity: coulFade }, temps);
+// Apparition de la nouvelle image
             $("#image2").animate({ height:"360px" }, temps);
             $("#image1").animate({ height:"0px" }, temps);
         }
@@ -114,16 +137,18 @@ $("#f6").click(function () {
 // Le carré blanc active le positionnement des autres carrés
 $("#f6").click(function () {   
     if  (
+// Condition : tout les carré se retrouvent en bas à droite
             ($(serieZ).position().top == 300)&&
             ($(serieZ).position().left == 300)
         ){
+// Animation du texte vers le bas
             $("#texte5").animate({ top: texteDrop }, temps);
             $("#texte1,#texte2,#texte3,#texte4").animate({ top: texteDrop, opacity: coulFade }, temps);    
             $("body").animate({ backgroundColor: coul, color: coulNoir},temps);
-            $("#grand").animate({ backgroundColor: coul},temps);
             $("#image2").animate({ width:"0px" }, temps);
-        
-            $("#a1").animate({ left: "-90px", top: "60px", backgroundColor:"#9e978f" }, temps);
+
+// Chaque carré se déplace vers une position définie à la gauche de la fenêtre
+            $("#a1").animate({ left: "-90px", top: "60px", backgroundColor:"black" }, temps);
             $("#a2").animate({ left: "-240px", top: "240px", backgroundColor:"#1f1611" }, temps);
             $("#a3").animate({ left: "-60px", top: "60px", backgroundColor:"#edceaf" }, temps);
             $("#a4").animate({ left: "-90px", top: "120px", backgroundColor:"#eccfcc" }, temps);
@@ -167,21 +192,45 @@ $("#f6").click(function () {
         }
 });
     
-    
-$("#a1").hover(function () {   
+
+// Déplace le carré vers le bas
+$("#a1").click(function () {   
     if  (
-            ($(this).position().left < 0)
+// Condition : tous les carrés doivent être à droite du DIV principal (#grand)
+            ($(serieZmoinsA1).position().left >= 0)
         ){
-            $(this).animate({ top: "0px", left: "0px" }, temps);
-            $(this).addClass("voirimage3");
+            $(this).animate({ top: "0px", left: "0px", backgroundColor:"blue" }, temps);
+            $("body").addClass("scrollhide");    
+            $("#texte6").animate({ top: texteDrop }, temps); 
+            $( ".texte0,#texte1,#texte2,#texte3,#texte4,#texte5" ).animate({ top: texteDrop, opacity: coulFade }, temps);
+            $("body").animate({ backgroundColor:"black" }, temps, function() {
+                $("#image3").animate({ height:"360px" }, 0, function() {
+                    $(serieZmoinsA1).remove();
+                    $("#a1").animate({ top: "300px", left: "0px", backgroundColor:"#c2dbfb" }, temps);
+                    $("#texte7").animate({ top: texteDrop }, temps); 
+                    $( ".texte0,#texte1,#texte2,#texte3,#texte4,#texte5,#texte6" ).animate({ top: texteDrop, opacity: coulFade }, temps);
+                    $("#image3").animate({ height:"0px" }, temps);
+                    $("#image4").animate({ height:"360px" }, temps, function() {
+                        $("#a1").remove();
+                        $("#a1-2").animate({ height: "60px" }, 0, function() {
+                        });
+                    });
+                });
+            });
         }
 });
 
+    
+
+    
+// Les carrés se repositionnent dans le DIV principal au survol de la souris
 $("#a2").hover(function () {   
     if  (
+// Condition : tout les carrés doivent être à gauche du DIV principal (#grand)
             ($(this).position().left < 0)
         ){
             $(this).animate({ top: "0px", left: "60px" }, temps);
+// Fait apparaitre une image d'arrière plan dans le carré
             $(this).addClass("voirimage3");
         }
 });
@@ -506,20 +555,61 @@ $("#f6").hover(function () {
             $(this).addClass("voirimage3");
         }
 });
- 
 
+
+    
+
+// Fait descendre le texte «M'en fou.» à chaque survole d'un carré
 $(serieZ).hover(function () {   
     if  (
+// Condition : tous les carrés doivent être à droite du DIV principal (#grand)
             ($(this).position().left < 0)
         ){
-            $("body").each(function(){    
+            $("body").each(function(){
+// Ajoute un DIV de texte dans le code html
                 $(this).append("<div class='texte0'><p>M'en fou.</p></div>");   
                 $(".texte0").animate({ top: texteDrop }, temps); 
                 $( "#texte1,#texte2,#texte3,#texte4,#texte5" ).animate({ top: texteDrop, opacity: coulFade }, temps);
             });
         }
 });
+    
 
+// Déplace le dernier carré visible
+$("#a1-2").click(function () {
+// Agrandit le gif animé, bien qu'il soit toujours invisible
+    $("#imagez").animate({ height:"100%" }, 0);
+// Agrandit la photo de plage, bien qu'elle soit toujours invisible
+    $("#imageplage").animate({ height:"100%" }, 0);    
+    $("body").animate({ backgroundColor:"black" }, temps);
+    $(this).animate({left: "300px"}, temps);
+// Redimensionne l'image visible
+    $("#image4").animate({width: "60px", height: "60px", backgroundSize: "60px"}, temps, function(){
+// FadeIn du gif animé
+        $("#imagez").fadeIn(10000);
+        $("#a1-2").animate({bottom: "180px"}, temps);
+        $("#image4").animate({top: "180px"}, temps, function(){
+            $("#a1-2").animate({left: "150px"}, temps);
+            $("#image4").animate({left: "150px"}, temps, function(){
+                $("#a1-2").animate({height: "0px"}, temps);
+                $("#image4").animate({height: "0px"}, temps);
+                $("#texte8").animate({ top: texteDrop }, temps); 
+                $( ".texte0,#texte1,#texte2,#texte3,#texte4,#texte5,#texte6,#texte7" ).animate({ top: texteDrop, opacity: coulFade }, temps, function(){
+// Enlève la bar de défilement
+                    $("#full").remove();
+// FadeOut du texte
+                    $(".texte0,#texte1,#texte2,#texte3,#texte4,#texte5,#texte6,#texte7,#texte8").fadeOut(10000);
+// FadeIn de la photo de plage
+                    $("#imageplage").delay(10000).fadeIn(20000);
+// FadeOut de la musique
+                    $("#audio1").delay(10000).animate({volume: 0}, 20000);
+// FadeIn du son de plage
+                    $("#audio2").delay(10000).animate({volume: 0.5}, 20000);
+                });
+            });
+        });
+    });
+});
     
     
     
